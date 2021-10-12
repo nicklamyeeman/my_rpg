@@ -1,0 +1,20 @@
+
+FF42: The game
+An RPG video game.
+
+USAGE:
+	./my_rpg [OPTIONS]
+
+OPTIONs:
+	-h	Print the usage and quit.
+
+USER INTERACTIONS:
+	Use the mouse to navigate through the menu.
+	ZQSD:	move character.
+	In fight:
+		Enter:		 validate and continue.
+		Arrow keys: 	 navigate between options.
+		Esc:  		 cancel.
+
+This game is still in WIP.
+The fight zone is around North East (follow the way, monsters will appears in grass).

@@ -1,0 +1,5 @@
+Bruddah 43 38 ./dialog/Bruddah ./ressources/pnj/bruddah.png 1		\\
+Demon 49 6 ./dialog/Demon ./ressources/pnj/boss.png 0			\\
+Garde 21 31 ./dialog/Garde ./ressources/pnj/garde.png 0			\\
+Garde 24 31 ./dialog/Garde ./ressources/pnj/garde.png 0			\\
+Gandoulf 56 37 ./dialog/Gandoulf ./ressources/pnj/gandoulf.png 0	\\

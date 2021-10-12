@@ -1,0 +1,5 @@
+title 0 0 ressources/menu/intro_bg.png 1 0 0 1920 1080 misc	menu		\\
+quit 600 840 ressources/menu/quit.png 1 0 0 1000 100 button menu		\\
+settings 600 760 ressources/menu/opts.png 1 0 0 1000 100 button menu	\\
+newgame 600 680 ressources/menu/newg.png 1 0 0 1000 100 button menu		\\
+continue 600 600 ressources/menu/cont.png 1 0 0 1000 100 button menu	\\
