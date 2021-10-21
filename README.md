@@ -137,6 +137,11 @@ Now you can try to find the boss and kick his a** !
 <img src="config/assets/bossfight.png" alt="bossfight">
 
 
+
+---
+
+
+
 ### BONUS N°1 : MAP MAKER
 
 ```sh
@@ -162,6 +167,11 @@ Additionnal commands :
 - LOAD [FILENAME]
 - CLEAR
 - SPAWN (Draw a spawn area where the player can encounter a fight while walking on it)
+
+
+
+---
+
 
 
 ### BONUS N°2 : RPG SIMULATOR
