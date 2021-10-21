@@ -87,7 +87,7 @@ Menu page:
 
 Navigate throught the menu with your mouse and click on the option you want
 
-![walk](https://github.com/nicklamyeeman/my_rpg/config/assets/walk.gif)
+![walk](https://github.com/nicklamyeeman/my_rpg/blob/main/config/assets/walk.gif)
 
 Move around using :
              <kbd>Z</kbd>
