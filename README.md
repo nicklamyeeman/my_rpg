@@ -111,6 +111,7 @@ To validate any option use <kbd>Enter↲</kbd>
 In the game you will fall randomly into battle against ennemies with a scaling level
 
 <img src="config/assets/fight.png" alt="fight">
+
 ![evis](https://github.com/nicklamyeeman/my_rpg/blob/main/config/assets/evis.gif)
 <img src="config/assets/bigfight.png" alt="bigfight">
 
