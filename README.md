@@ -111,6 +111,7 @@ To validate any option use <kbd>Enter↲</kbd>
 In the game you will fall randomly into battle against ennemies with a scaling level
 
 <img src="config/assets/fight.png" alt="fight">
+![evis](https://github.com/nicklamyeeman/my_rpg/blob/main/config/assets/evis.gif)
 <img src="config/assets/bigfight.png" alt="bigfight">
 
 Fight is turn-by-turn based and have random events like missing, critical strike or chances to run away
@@ -119,8 +120,8 @@ Fight is turn-by-turn based and have random events like missing, critical strike
 
 Fights allow single attack, damaging spells, heal spells and any victory give your team experience.
 
-<img src="config/assets/consecration.png" alt="consecration">
-<img src="config/assets/heal.png" alt="heal">
+![consec](https://github.com/nicklamyeeman/my_rpg/blob/main/config/assets/consec.gif)
+![heal](https://github.com/nicklamyeeman/my_rpg/blob/main/config/assets/heal.gif)
 <img src="config/assets/exp.png" alt="exp">
 
 Each level progressively increase stats of each characters in your team
