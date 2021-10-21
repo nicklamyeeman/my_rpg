@@ -18,7 +18,7 @@ int	my_listlen(obj_t *list)
 	return (i);
 }
 
-int	move_cursor_inv(rpg_t *rp, sfEvent ev)
+void	move_cursor_inv(rpg_t *rp, sfEvent ev)
 {
 	sfVector2f	pos = sfSprite_getPosition(rp->sprite[3].sprite);
 	int	max = my_listlen(rp->obj);
@@ -46,7 +46,6 @@ void	check_item_selected(rpg_t *rp)
 {
 	sfFloatRect	rec = sfSprite_getGlobalBounds(rp->sprite[3].sprite);
 	sfVector2f	vec = v2f(rec.left + 370, rec.top - 30);
-	sfVector2f	cpy = v2f(rec.left + 310, rec.top);
 
 	sfSprite_setPosition(rp->sprite[7].sprite, vec);
 	rp->bol.stat = 1;
@@ -62,4 +61,5 @@ int	event_inv(rpg_t *rp, sfEvent ev)
 		move_cursor_inv(rp, ev);
 	if (ev.type == sfEvtKeyPressed && ev.key.code == sfKeyReturn)
 		check_item_selected(rp);
+	return (1);
 }

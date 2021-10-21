@@ -15,13 +15,12 @@
 int	texture_exist(char *texture)
 {
 	struct dirent	*cur;
-	struct stat	info;
 	DIR	*dir;
 
 	dir = opendir("./texture");
 	if (dir == NULL)
 		return (84);
-	while (cur = readdir(dir)) {
+	while ((cur = readdir(dir))) {
 		if (same_strings(cur->d_name, texture) == 1)
 			return (1);
 	}

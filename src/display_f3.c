@@ -15,7 +15,7 @@
 #include <fcntl.h>
 #include "rpg.h"
 
-void	crit_display(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
+void	crit_display(win_t *win, btle_t *btle)
 {
 	sfRenderWindow_drawSprite(win->win, btle->turn.crits, NULL);
 	sfSprite_setPosition(btle->nexts, v2f(490, 740));
@@ -31,7 +31,7 @@ void	crit_display(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
 	sfRenderWindow_drawSprite(win->win, btle->nexts, NULL);
 }
 
-void	ento_display(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
+void	ento_display(win_t *win, btle_t *btle, chara_t *p)
 {
 	sfRenderWindow_drawSprite(win->win, btle->turn.vppps, NULL);
 	sfSprite_setPosition(btle->nexts, v2f(1520, 740));
@@ -77,7 +77,7 @@ void	eavp_display(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
 	sfRenderWindow_drawText(win->win, ennem[btle->tmp->perso].entex, NULL);
 }
 
-void	vprm_display(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
+void	vprm_display(win_t *win, btle_t *btle, chara_t *p)
 {
 	sfRenderWindow_drawSprite(win->win, btle->turn.vprms, NULL);
 	sfSprite_setPosition(btle->nexts, v2f(1390, 765));
@@ -98,7 +98,7 @@ void	vprm_display(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
 	sfRenderWindow_drawText(win->win, btle->hptex, NULL);
 }
 
-void	heal_display(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
+void	heal_display(win_t *win, btle_t *btle, chara_t *p)
 {
 	sfRenderWindow_drawSprite(win->win, btle->turn.vprps, NULL);
 	sfSprite_setPosition(btle->nexts, v2f(1390, 765));

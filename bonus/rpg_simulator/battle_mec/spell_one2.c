@@ -30,7 +30,7 @@ void	pala_sone2(comb_t *comb, int i, chara_t *p, fight_t *tmp)
 		rm = comb[i].ennem[k].rm;
 		hplost = ((((lvl * 0.4 + 2) * mag * 20) / (rm * 50)) + 2) * c;
 		comb[i].ennem[k].hplt -= hplost;
-		team_touch(p, tmp, &comb[i].ennem[k], hplost);
+		team_touch(&comb[i].ennem[k], hplost);
 	}
 }
 
@@ -49,7 +49,7 @@ void	mage_sone2(comb_t *comb, int i, chara_t *p, fight_t *tmp)
 		rm = comb[i].ennem[k].rm;
 		hplost = ((((lvl * 0.4 + 2) * mag * 10) / (rm * 50)) + 2) * c;
 		comb[i].ennem[k].hplt -= hplost;
-		team_touch(p, tmp, &comb[i].ennem[k], hplost);
+		team_touch(&comb[i].ennem[k], hplost);
 	}
 }
 
@@ -68,7 +68,7 @@ int	arch_sone2(ennem_t *ennem, chara_t *p, fight_t *tmp)
 	c = (c == 0) ? 2 : 1;
 	hplost = ((((lvl * 0.4 + 2) * mag * 30) / (rm * 50)) + 2) * c;
 	ennem->hplt -= hplost;
-	team_touch(p, tmp, ennem, hplost);
+	team_touch(ennem, hplost);
 	return (0);
 }
 
@@ -89,7 +89,7 @@ int	vole_sone2(ennem_t *ennem, chara_t *p, fight_t *tmp)
 		if (c == 2)
 			my_printf("Coup critique !\n");
 		ennem->hplt -= hplost;
-		team_touch(p, tmp, ennem, hplost);
+		team_touch(ennem, hplost);
 	}
 	return (1);
 }
@@ -97,7 +97,6 @@ int	vole_sone2(ennem_t *ennem, chara_t *p, fight_t *tmp)
 void	mene_sone2(int r, chara_t *p, fight_t *tmp)
 {
 	int	pmp;
-	int	hplost;
 	int	rm = p[r].rm;
 	int	lvl = p[tmp->perso].lvl;
 	int	mag = p[tmp->perso].mg;

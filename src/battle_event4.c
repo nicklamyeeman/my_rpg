@@ -15,21 +15,21 @@
 #include <fcntl.h>
 #include "rpg.h"
 
-void	bteq_event(win_t *win, btle_t *btle)
+void	bteq_event(win_t *win)
 {
 	if (win->evt.type == sfEvtKeyPressed)
 		if (win->evt.key.code == sfKeyReturn)
 			win->f = 2;
 }
 
-void	vapc_event(win_t *win, btle_t *btle)
+void	vapc_event(win_t *win)
 {
 	if (win->evt.type == sfEvtKeyPressed)
 		if (win->evt.key.code == sfKeyReturn)
 			win->f = 43;
 }
 
-void	fepn_event(win_t *win, btle_t *btle)
+void	fepn_event(win_t *win)
 {
 	if (win->evt.type == sfEvtKeyPressed)
 		if (win->evt.key.code == sfKeyReturn)

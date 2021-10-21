@@ -29,7 +29,7 @@ int	will_you_run(void)
 	}
 }
 
-int	resume_fight(comb_t *comb, int i, chara_t *perso, fight_t *tmp)
+int	resume_fight(comb_t *comb, int i, chara_t *perso)
 {
 	print_team(perso);
 	my_putstr("\n\n\t\t");
@@ -49,7 +49,7 @@ int	do_in_fight(comb_t *comb, int i, chara_t *perso, fight_t *tmp)
 		if (my_strcmp(s, cmp[j]) == 0) {
 			r = (j == 0) ? let_hurt_them(comb, i, perso, tmp) : r;
 			r = (j == 1) ? let_spell_us(comb, i, perso, tmp) : r;
-			r = (j == 2) ? resume_fight(comb, i, perso, tmp) : r;
+			r = (j == 2) ? resume_fight(comb, i, perso) : r;
 			r = (j == 3) ? will_you_run() : r;
 			return (r);
 		}

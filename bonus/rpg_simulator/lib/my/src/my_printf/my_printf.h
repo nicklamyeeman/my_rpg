@@ -20,11 +20,11 @@ typedef	struct	s_flags
 
 }	t_type;
 
-void	*traitement(va_list *, t_type *);
-void	*disp_s(va_list *);
-void	*disp_d(va_list *);
-void	*disp_i(va_list *);
-void	*disp_c(va_list *);
-void	*disp_r(va_list *);
+void	traitement(va_list *, t_type *);
+void	disp_s(va_list *);
+void	disp_d(va_list *);
+void	disp_i(va_list *);
+void	disp_c(va_list *);
+void	disp_r(va_list *);
 
 #endif /* !MY_PRINTF_H_ */

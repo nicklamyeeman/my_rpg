@@ -11,8 +11,10 @@
 #include <unistd.h>
 #include "rpg.h"
 
-ennem_t	*init_bigxp(ennem_t *ennem)
+ennem_t	*init_bigxp()
 {
+	ennem_t	*ennem = NULL;
+
 	ennem = malloc(sizeof(*ennem) * 4);
 	ennem[0] = init_troll();
 	ennem[1] = init_pampa();
@@ -21,8 +23,10 @@ ennem_t	*init_bigxp(ennem_t *ennem)
 	return (ennem);
 }
 
-ennem_t	*init_easy(ennem_t *ennem)
+ennem_t	*init_easy()
 {
+	ennem_t	*ennem = NULL;
+
 	ennem = malloc(sizeof(*ennem) * 4);
 	ennem[0] = init_troll();
 	ennem[1] = init_gob();
@@ -33,8 +37,10 @@ ennem_t	*init_easy(ennem_t *ennem)
 	return (ennem);
 }
 
-ennem_t	*init_horde(ennem_t *ennem)
+ennem_t	*init_horde()
 {
+	ennem_t	*ennem = NULL;
+	
 	ennem = malloc(sizeof(*ennem) * 7);
 	ennem[0] = init_gob();
 	ennem[0].name = my_strdup("Gob A");
@@ -52,8 +58,10 @@ ennem_t	*init_horde(ennem_t *ennem)
 	return (ennem);
 }
 
-ennem_t	*init_hard(ennem_t *ennem)
+ennem_t	*init_hard()
 {
+	ennem_t	*ennem = NULL;
+	
 	ennem = malloc(sizeof(*ennem) * 6);
 	ennem[0] = init_troll();
 	ennem[0].name = my_strdup("Troll A");
@@ -69,8 +77,10 @@ ennem_t	*init_hard(ennem_t *ennem)
 	return (ennem);
 }
 
-ennem_t	*init_trolz(ennem_t *ennem)
+ennem_t	*init_trolz()
 {
+	ennem_t	*ennem = NULL;
+
 	ennem = malloc(sizeof(*ennem) * 7);
 	ennem[0] = init_pampa();
 	ennem[1] = init_bidoof();

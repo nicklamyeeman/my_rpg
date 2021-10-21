@@ -17,8 +17,6 @@
 
 void	before_help(chara_t *perso)
 {
-	int	e = 0;
-
 	my_printf("\nQui voulez vous soigner ?\n");
 	for (int n = 0; n != 5; n ++) {
 		my_printf("%d: ", n + 1);
@@ -56,7 +54,7 @@ int	which_pone(comb_t *comb, int i, chara_t *perso, fight_t *tmp)
 		ret = t;
 	}
 	if (tmp->perso == 4)
-		ret = mene_sone(comb, i, perso, tmp);
+		ret = mene_sone(perso, tmp);
 	return (ret);
 }
 
@@ -70,7 +68,7 @@ int	which_ptwo2(comb_t *comb, int i, chara_t *perso, fight_t *tmp)
 			t = vole_stwo(comb, i, perso, tmp);
 	}
 	if (tmp->perso == 4)
-		t = mene_stwo(comb, i, perso, tmp);
+		t = mene_stwo(perso, tmp);
 	return (t);
 }
 
@@ -81,7 +79,7 @@ int	which_ptwo(comb_t *comb, int i, chara_t *perso, fight_t *tmp)
 	if (tmp->perso == 0) {
 		before_help(perso);
 		while (t < 1)
-			t = pala_stwo(comb, i, perso, tmp);
+			t = pala_stwo(perso, tmp);
 	}
 	if (tmp->perso == 1) {
 		before_spell(comb, i);

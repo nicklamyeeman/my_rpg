@@ -15,7 +15,7 @@
 #include <fcntl.h>
 #include "rpg.h"
 
-int	pala_stwo(comb_t *comb, int i, chara_t *p, fight_t *tmp)
+int	pala_stwo(chara_t *p, fight_t *tmp)
 {
 	char	*cmp[6] = {"1", "2", "3", "4", "5", NULL};
 	int	r = -1;
@@ -107,7 +107,7 @@ int	vole_stwo(comb_t *comb, int i, chara_t *p, fight_t *tmp)
 	return (0);
 }
 
-int	mene_stwo(comb_t *comb, int i, chara_t *p, fight_t *tmp)
+int	mene_stwo(chara_t *p, fight_t *tmp)
 {
 	int	e = rand() % 100;
 

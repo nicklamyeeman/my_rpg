@@ -92,8 +92,7 @@ int	analyse_turn(win_t *win, btle_t *btle, ennem_t *ennem, chara_t *p)
 	}
 	if (end_team(p) == 1)
 		return (0);
-	else if (end_ennem(ennem) == 1)
-		return (1);
+	return (1);
 }
 
 int	go_fight(win_t *win, btle_t *btle, ennem_t *ennem, chara_t *perso)

@@ -21,7 +21,7 @@ void	draw_array(sfRenderWindow *w, fb_d *fb)
 
 	while (y < 1080) {
 		while (x < 1920) {
-			draw_square(20, fb, create_vector(x, y), sfBlack);
+			draw_square(20, fb, create_vector(x, y));
 			x += 20;
 		}
 		x = 0;
@@ -68,7 +68,7 @@ void	check_select(variables *v, map_s **map)
 
 void	loop(variables v, map_s **map)
 {
-	fb_d	*fb = malloc_frame_buffer(fb, 1080, 1920);
+	fb_d	*fb = malloc_frame_buffer(1080, 1920);
 
 	while (sfRenderWindow_isOpen(v.window)) {
 		sfRenderWindow_clear(v.window, sfBlack);
@@ -85,9 +85,9 @@ void	loop(variables v, map_s **map)
 	}
 }
 
-int	main(int ac, char **av)
+int	main(void)
 {
-	variables	var = init_var(var);
+	variables	var = init_var();
 	map_s	*map = NULL;
 
 	loop(var, &map);

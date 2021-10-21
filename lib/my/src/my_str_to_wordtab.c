@@ -42,7 +42,7 @@ char	**my_str_to_wordtab(char *str, char sep)
 	tab = malloc(sizeof(char *) * (countword(str, sep) + 1));
 	while (str[i] != '\0') {
 		if (str[i] == sep) {
-			for (i; (str[i] == sep); i++);
+			for (; str[i] == sep; i++);
 			a += 1;
 			b = 0;
 		}

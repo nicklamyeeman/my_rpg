@@ -36,35 +36,35 @@ void	cast_pone(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
 	ennem->num = 0;
 	if (btle->tmp->perso == 0) {
 		for (int i = 0; ennem[i].name != NULL; ennem->num++, i++)
-			speone_pala(win, btle, p, ennem);
+			speone_pala(win, p, ennem);
 	}
 	if (btle->tmp->perso == 1) {
 		for (int i = 0; ennem[i].name != NULL; ennem->num++, i++)
-			speone_mage(win, btle, p, ennem);
+			speone_mage(win, p, ennem);
 	}
 	if (btle->tmp->perso == 2)
-		speone_arch(win, btle, p, ennem);
+		speone_arch(win, p);
 	if (btle->tmp->perso == 3)
-		speone_vole(win, btle, p, ennem);
+		speone_vole(win, p, ennem);
 	if (btle->tmp->perso == 4) {
 		for (p->num = 0; p->num != 5; p->num++)
-			speone_mene(win, btle, p, ennem);
+			speone_mene(win, p);
 	}
 }
 
 void	cast_ptwo(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
 {
 	if (btle->tmp->perso == 0)
-		spetwo_pala(win, btle, p, ennem);
+		spetwo_pala(win, p);
 	if (btle->tmp->perso == 1)
-		spetwo_mage(win, btle, p, ennem);
+		spetwo_mage(win, p, ennem);
 	if (btle->tmp->perso == 2)
-		spetwo_arch(win, btle, p, ennem);
+		spetwo_arch(win, p);
 	if (btle->tmp->perso == 3)
-		spetwo_vole(win, btle, p, ennem);
+		spetwo_vole(win, p, ennem);
 	if (btle->tmp->perso == 4) {
 		for (p->num = 0; p->num != 5; p->num++)
-			spetwo_mene(win, btle, p, ennem);
+			spetwo_mene(win, p);
 	}
 }
 
@@ -80,8 +80,6 @@ int	choose_target(win_t *win, btle_t *btle, ennem_t *ennem, chara_t *perso)
 
 int	let_spell_us(win_t *win, btle_t *btle, ennem_t *ennem, chara_t *perso)
 {
-	int	t = 0;
-
 	win->f = 10;
 	sfSprite_setPosition(btle->turn.arros, v2f(70, 895));
 	while (win->f == 10) {

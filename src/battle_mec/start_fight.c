@@ -49,7 +49,6 @@ void	fainted_ennemy(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
 void	start_fight(win_t *win, comb_t *comb, chara_t *p)
 {
 	int	i = rand() % 5;
-	int	k = 0;
 	btle_t btle;
 
 	win->loop = 1;

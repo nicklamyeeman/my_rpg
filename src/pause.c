@@ -13,7 +13,7 @@
 #include <unistd.h>
 #include "rpg.h"
 
-int	replace_stats(rpg_t *rp)
+void	replace_stats(rpg_t *rp)
 {
 	sfVector2f	vec = sfView_getCenter(rp->cam.view);
 
@@ -37,8 +37,6 @@ int	replace_stats(rpg_t *rp)
 
 int	last_set(rpg_t *rp, chara_t car, char *tmp)
 {
-	int	state = rp->bol.per;
-
 	tmp = int_to_char(car.esc);
 	sfText_setString(rp->stat.esq, tmp);
 	free(tmp);

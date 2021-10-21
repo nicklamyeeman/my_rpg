@@ -88,7 +88,6 @@ int	choose_victim(win_t *win, btle_t *btle, ennem_t *ennem, chara_t *p)
 
 int	let_hurt_them(win_t *win, btle_t *btle, ennem_t *ennem, chara_t *p)
 {
-	int	e = 0;
 	int	t = 0;
 
 	win->f = 4;

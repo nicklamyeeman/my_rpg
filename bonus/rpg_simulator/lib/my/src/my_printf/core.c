@@ -31,11 +31,11 @@ int	type_detect(char a, void *flags, char *str)
 	return (0);
 }
 
-void	*traitement(va_list *ap, t_type *flags)
+void	traitement(va_list *ap, t_type *flags)
 {
 	int	a = -1;
 	char	*IDX = "sdicr";
-	void	*(*disp_tab[])(va_list *) = {disp_s, disp_d, disp_i,
+	void	(*disp_tab[])(va_list *) = {disp_s, disp_d, disp_i,
 		disp_c, disp_r};
 
 	while (IDX[++a] != '\0')

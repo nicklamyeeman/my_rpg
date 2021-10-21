@@ -55,6 +55,7 @@ char	*mein_cpy(char	**ret, char *str, int *start, int fin)
 	if (*ret)
 		free(*ret);
 	*ret = deter;
+	return (NULL);
 }
 
 int	check_i(int *start, int *fin, int *i, char **ret)
@@ -90,4 +91,5 @@ char	*get_next_line(int fd)
 			mein_cpy(&ret, tmp, &start, fin + 1);
 		fin += 1;
 	}
+	return (ret);
 }

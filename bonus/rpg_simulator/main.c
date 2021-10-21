@@ -16,16 +16,15 @@
 #include <math.h>
 #include "rpg.h"
 
-int	main(int ac, char **av)
+int	main(void)
 {
-	chara_t	*perso;
-	comb_t	*comb;
-	win_t	win;
+	chara_t	*perso = NULL;
+	comb_t	*comb = NULL;
 	void	*m = malloc(1);
 
 	srand((unsigned long)m);
-	perso = init_perso(perso);
-	comb = init_ennemies(comb);
+	perso = init_perso();
+	comb = init_ennemies();
 	my_printf("Voici votre équipe: \n");
 	print_team(perso);
 	battle_orupgrade(perso, comb);

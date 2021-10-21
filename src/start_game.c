@@ -44,7 +44,7 @@ void	move_or_not(win_t *w, player_t *p, map_t *map, pnj_t *pnj)
 		speak_pnj(w, p);
 }
 
-void	check_move(player_t *p, map_t *map)
+void	check_move(player_t *p)
 {
 	if (p->mvx != 0 || p->mvy != 0) {
 		sfClock_restart(p->clock);
@@ -56,17 +56,17 @@ void	move_event(player_t *p, map_t *map, pnj_t *pnj, rpg_t *rp)
 {
 	if (rp->bol.menu == GAME && p->speaking_with == NULL) {
 		move_player(p, map, pnj);
-		check_move(p, map);
+		check_move(p);
 	}
 }
 
-void	start_game(win_t *w, player_t *player, rpg_t rp)
+void	start_game(win_t *w, player_t *player)
 {
 	map_t	*map = NULL;
-	pnj_t	*pnj = load_pnj(pnj);
+	pnj_t	*pnj = load_pnj();
+	rpg_t rp = init_struct(w);
 
 	sfMusic_destroy(w->audio.theme);
-	rp = init_struct(rp, w);
 	w->loop = 1;
 	map = load_map("./maps/.map", map);
 	w->cur_scene = "play";

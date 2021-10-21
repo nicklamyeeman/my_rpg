@@ -87,7 +87,7 @@ void	save(map_s **map, char *name)
 
 	find_max(map, &x_max, &y_max);
 	while (y <= y_max) {
-		while (t != NULL && t->x != x || t != NULL && t->y != y)
+		while ((t != NULL && t->x != x) || (t != NULL && t->y != y))
 			t = t->next;
 		concat_info(t, fd, wall);
 		t = *map;

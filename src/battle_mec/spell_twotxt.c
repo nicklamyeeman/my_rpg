@@ -15,7 +15,7 @@
 #include <fcntl.h>
 #include "rpg.h"
 
-void	spetwo_pala(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
+void	spetwo_pala(win_t *win, chara_t *p)
 {
 	sfVector2f	a = sfSprite_getPosition(p[p->num].perss);
 
@@ -38,7 +38,7 @@ void	spetwo_pala(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
 	update_spell2(win, &p[0], 192, 4);
 }
 
-void	spetwo_mage(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
+void	spetwo_mage(win_t *win, chara_t *p, ennem_t *ennem)
 {
 	sfVector2f	a = sfSprite_getPosition(ennem[ennem->num].ennes);
 
@@ -59,7 +59,7 @@ void	spetwo_mage(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
 	update_spell2(win, &p[1], 192, 5);
 }
 
-void	spetwo_arch(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
+void	spetwo_arch(win_t *win, chara_t *p)
 {
 	sfVector2f	a = sfSprite_getPosition(p[2].perss);
 
@@ -82,7 +82,7 @@ void	spetwo_arch(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
 	update_spell2(win, &p[2], 90, 2);
 }
 
-void	spetwo_vole(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
+void	spetwo_vole(win_t *win, chara_t *p, ennem_t *ennem)
 {
 	sfVector2f	a = sfSprite_getPosition(ennem[ennem->num].ennes);
 
@@ -104,7 +104,7 @@ void	spetwo_vole(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
 	update_spell2(win, &p[3], 192, 4);
 }
 
-void	spetwo_mene(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
+void	spetwo_mene(win_t *win, chara_t *p)
 {
 	sfVector2f	a = sfSprite_getPosition(p[p->num].perss);
 

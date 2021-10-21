@@ -13,7 +13,7 @@
 #include <unistd.h>
 #include "rpg.h"
 
-int	enter_house(win_t *w, player_t *p, map_t *map)
+int	enter_house(player_t *p)
 {
 	if (p->x == 13 && p->y == 39) {
 		p->x = 45;
@@ -30,7 +30,7 @@ int	enter_house(win_t *w, player_t *p, map_t *map)
 	return (0);
 }
 
-int	exit_house(win_t *w, player_t *p, map_t *map)
+int	exit_house(player_t *p)
 {
 	if (p->x == 45 && p->y == 40) {
 		p->x = 13;
@@ -55,11 +55,11 @@ void	house_movement(win_t *w, player_t *p, map_t *map)
 		tmp = tmp->next;
 	if (tmp == NULL)
 		return;
-	if (enter_house(w, p, tmp)) {
+	if (enter_house(p)) {
 		w->alpha = 255;
 		return;
 	}
-	if (exit_house(w, p, tmp)) {
+	if (exit_house(p)) {
 		w->alpha = 255;
 		return;
 	}

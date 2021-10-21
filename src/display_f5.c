@@ -43,7 +43,7 @@ void	bteq_display(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
 	sfRenderWindow_drawSprite(win->win, btle->turn.bteqs, NULL);
 }
 
-void	fepn_display(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
+void	fepn_display(win_t *win, btle_t *btle)
 {
 	sfRenderWindow_drawSprite(win->win, btle->turn.fepns, NULL);
 	sfText_setPosition(btle->hptex, v2f(1250, 770));
@@ -61,7 +61,7 @@ void	fepn_display(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
 	sfRenderWindow_drawText(win->win, btle->hptex, NULL);
 }
 
-void	vapc_display(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
+void	vapc_display(win_t *win, btle_t *btle)
 {
 	sfRenderWindow_drawSprite(win->win, btle->turn.vapcs, NULL);
 	sfSprite_setPosition(btle->nexts, v2f(890, 740));

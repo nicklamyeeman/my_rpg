@@ -12,8 +12,9 @@
 #include <stdio.h>
 #include "proto.h"
 
-variables	init_var(variables var)
+variables	init_var()
 {
+	variables var;
 	sfVideoMode	mode = {1920, 1080, 32};
 
 	var.window = sfRenderWindow_create(mode, "map_maker", sfClose, NULL);

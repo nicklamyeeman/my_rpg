@@ -37,13 +37,13 @@ void	add_pnj(pnj_t **pnj, char *line)
 	tmp->next = elem;
 }
 
-pnj_t	*load_pnj(pnj_t *pnj)
+pnj_t	*load_pnj()
 {
+	pnj_t *pnj = NULL;
 	int	fd = open("./config/.pnj", O_RDONLY);
 	int	loop = 1;
 	char	*line;
 
-	pnj = NULL;
 	if (fd == -1) {
 		my_putstr("Error: The pnj file is missing/\n");
 		return (NULL);

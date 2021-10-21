@@ -113,11 +113,11 @@ void	do_troub(chara_t *);
 void	do_pala(chara_t *);
 void	do_majo(chara_t *);
 
-spell_t	spell_mage(spell_t);
-spell_t	spell_pala(spell_t);
-spell_t	spell_assas(spell_t);
-spell_t	spell_troub(spell_t);
-spell_t	spell_archer(spell_t);
+spell_t	spell_mage();
+spell_t	spell_pala();
+spell_t	spell_assas();
+spell_t	spell_troub();
+spell_t	spell_archer();
 
 ennem_t	init_bidoof(void);
 ennem_t	init_pampa(void);
@@ -130,13 +130,13 @@ chara_t	init_troub(void);
 chara_t	init_archer(void);
 chara_t	init_assassin(void);
 
-ennem_t	*init_easy(ennem_t *);
-ennem_t	*init_hard(ennem_t *);
-ennem_t	*init_bigxp(ennem_t *);
-ennem_t	*init_horde(ennem_t *);
-ennem_t	*init_trolz(ennem_t *);
+ennem_t	*init_easy();
+ennem_t	*init_hard();
+ennem_t	*init_bigxp();
+ennem_t	*init_horde();
+ennem_t	*init_trolz();
 
-chara_t	*init_perso(chara_t *);
+chara_t	*init_perso();
 int	choose_hero(chara_t *);
 int	get_class(chara_t *, int);
 void	my_print_struct(chara_t *);
@@ -154,7 +154,7 @@ char	*my_strcat(char *, char *);
 
 int	print_team(chara_t *);
 void	my_print_ennem(comb_t *, int, int);
-comb_t	*init_ennemies(comb_t *);
+comb_t	*init_ennemies();
 void	print_ennemies(comb_t *, int);
 int	get_ennem(chara_t *, ennem_t *, char *, int);
 
@@ -167,7 +167,7 @@ int	end_ennem(comb_t *, int);
 int	team_turn(comb_t *, int, chara_t *, fight_t *);
 int	let_hurt_them(comb_t *, int, chara_t *, fight_t *);
 int	let_spell_us(comb_t *, int, chara_t *, fight_t *);
-int	team_touch(chara_t *, fight_t *, ennem_t *, int);
+int	team_touch(ennem_t *, int);
 int	ennem_exist(char *, comb_t *, int);
 
 int	which_pone(comb_t *, int, chara_t *, fight_t *);
@@ -178,12 +178,12 @@ int	pala_sone(comb_t *, int, chara_t *, fight_t *);
 int	mage_sone(comb_t *, int, chara_t *, fight_t *);
 int	arch_sone(comb_t *, int, chara_t *, fight_t *);
 int	vole_sone(comb_t *, int, chara_t *, fight_t *);
-int	mene_sone(comb_t *, int, chara_t *, fight_t *);
-int	pala_stwo(comb_t *, int, chara_t *, fight_t *);
+int	mene_sone(chara_t *, fight_t *);
+int	pala_stwo(chara_t *, fight_t *);
 int	mage_stwo(comb_t *, int, chara_t *, fight_t *);
 int	arch_stwo(comb_t *, int, chara_t *, fight_t *);
 int	vole_stwo(comb_t *, int, chara_t *, fight_t *);
-int	mene_stwo(comb_t *, int, chara_t *, fight_t *);
+int	mene_stwo(chara_t *, fight_t *);
 int	vole_sone2(ennem_t *, chara_t *, fight_t *);
 int	mage_stwo2(ennem_t *, chara_t *, fight_t *);
 int	arch_stwo2(ennem_t *, chara_t *, fight_t *);

@@ -53,7 +53,7 @@ int	full_face(chara_t *p, fight_t *tmp, int def)
 	return (hplost);
 }
 
-int	team_touch(chara_t *perso, fight_t *tmp, ennem_t *ennem, int hplost)
+int	team_touch(ennem_t *ennem, int hplost)
 {
 	my_printf("Le %s adverse perd", ennem->name);
 	my_printf(" %d point(s) de vie.\n", hplost);
@@ -83,7 +83,7 @@ int	choose_victim(comb_t *comb, int i, chara_t *perso, fight_t *tmp)
 		comb[i].ennem[r].hplt -= (hplost = full_face(perso, tmp, def));
 		if (comb[i].ennem[r].hplt <= 0)
 			comb[i].ennem[r].hplt = 0;
-		return (team_touch(perso, tmp, &comb[i].ennem[r], hplost));
+		return (team_touch(&comb[i].ennem[r], hplost));
 	}
 	return (0);
 }

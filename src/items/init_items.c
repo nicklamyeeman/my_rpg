@@ -24,7 +24,7 @@ void	my_item_to_list(obj_t **list, char *sprite, char *texte, int i)
 	return;
 }
 
-int	init_items(obj_t **list)
+void	init_items(obj_t **list)
 {
 	*list = NULL;
 	my_item_to_list(list, "assets/ann.png", "assets/txta.png", ANNE);

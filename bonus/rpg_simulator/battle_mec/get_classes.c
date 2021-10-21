@@ -11,8 +11,10 @@
 #include <unistd.h>
 #include "rpg.h"
 
-chara_t	*init_perso(chara_t *perso)
+chara_t	*init_perso()
 {
+	chara_t *perso = NULL;
+
 	perso = malloc(sizeof(*perso) * 5);
 	perso[0] = init_pala();
 	perso[1] = init_mage();
@@ -22,16 +24,16 @@ chara_t	*init_perso(chara_t *perso)
 	return (perso);
 }
 
-comb_t	*init_ennemies(comb_t *comb)
+comb_t	*init_ennemies()
 {
-	ennem_t	*ennem;
+	comb_t *comb = NULL;
 
 	comb = malloc(sizeof(*comb) * 5);
-	comb[0].ennem = init_easy(ennem);
-	comb[1].ennem = init_hard(ennem);
-	comb[2].ennem = init_horde(ennem);
-	comb[3].ennem = init_bigxp(ennem);
-	comb[4].ennem = init_trolz(ennem);
+	comb[0].ennem = init_easy();
+	comb[1].ennem = init_hard();
+	comb[2].ennem = init_horde();
+	comb[3].ennem = init_bigxp();
+	comb[4].ennem = init_trolz();
 	return (comb);
 }
 

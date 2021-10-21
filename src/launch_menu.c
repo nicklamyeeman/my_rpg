@@ -14,7 +14,7 @@
 
 void	launch_menu(void)
 {
-	win_t	w = init_window(w);
+	win_t	w = init_window();
 
 	roll_intro(w);
 	w.cur_scene = "menu";

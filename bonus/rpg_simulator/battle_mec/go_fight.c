@@ -86,8 +86,7 @@ int	analyse_turn(comb_t *comb, int i, chara_t *perso, fight_t *order)
 	}
 	if (end_team(perso) == 1)
 		return (0);
-	else if (end_ennem(comb, i) == 1)
-		return (1);
+	return (1);
 }
 
 int	go_fight(comb_t *comb, int i, chara_t *perso)

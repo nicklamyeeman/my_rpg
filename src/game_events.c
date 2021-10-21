@@ -13,7 +13,7 @@
 #include <unistd.h>
 #include "rpg.h"
 
-void	turn_pnj_y(win_t *w, player_t *p, pnj_t *pnj)
+void	turn_pnj_y(player_t *p, pnj_t *pnj)
 {
 	pnj_t	*tmp = pnj;
 
@@ -32,7 +32,7 @@ void	turn_pnj_y(win_t *w, player_t *p, pnj_t *pnj)
 	}
 }
 
-void	turn_pnj_x(win_t *w, player_t *p, pnj_t *pnj)
+void	turn_pnj_x(player_t *p, pnj_t *pnj)
 {
 	pnj_t	*tmp = pnj;
 
@@ -71,8 +71,8 @@ void	speak_event(win_t *w, player_t *p, pnj_t *pnj, sfEvent event)
 {
 	if (event.type == sfEvtKeyPressed &&
 	event.key.code == sfKeyE) {
-		turn_pnj_x(w, p, pnj);
-		turn_pnj_y(w, p, pnj);
+		turn_pnj_x(p, pnj);
+		turn_pnj_y(p, pnj);
 		if (p->speaking_with != NULL) {
 			p->line += 1;
 			load_dialog(p, pnj);

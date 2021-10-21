@@ -11,8 +11,10 @@
 #include <unistd.h>
 #include "rpg.h"
 
-spell_t	spell_mage(spell_t spell)
+spell_t	spell_mage()
 {
+	spell_t spell;
+
 	char	*spell1a = "Nova de Givre:\tPui: 10  Prec: 100 PM: 2\tLanc";
 	char	*spell1b = "e une explosion givree sur tous les ennemis.\n";
 	char	*spell1 = my_strcat(spell1a, spell1b);
@@ -26,8 +28,10 @@ spell_t	spell_mage(spell_t spell)
 	return (spell);
 }
 
-spell_t	spell_pala(spell_t spell)
+spell_t	spell_pala()
 {
+	spell_t spell;
+
 	char	*spell1a = "Consecration:\tPui: 20  Prec: 85  PM: 4\tAbat ";
 	char	*spell1b = "la puissance des cieux sur tous les ennemis.\n";
 	char	*spell1 = my_strcat(spell1a, spell1b);
@@ -41,8 +45,10 @@ spell_t	spell_pala(spell_t spell)
 	return (spell);
 }
 
-spell_t	spell_assas(spell_t spell)
+spell_t	spell_assas()
 {
+	spell_t spell;
+
 	char	*spell1a = "Assassiner:\t\tPui: 90  Prec: 70  PM: 5\tAttaq";
 	char	*spell1b = "ue un ennemi. Chances de critique elevees.\n";
 	char	*spell1 = my_strcat(spell1a, spell1b);
@@ -56,8 +62,10 @@ spell_t	spell_assas(spell_t spell)
 	return (spell);
 }
 
-spell_t	spell_archer(spell_t spell)
+spell_t	spell_archer()
 {
+	spell_t spell;
+
 	char	*spell1a = "Tirs Multiples:\tPui: 30  Prec: 100 PM: 4\tLan";
 	char	*spell1b = "ce 2 fleches aleatoirement sur les ennemis.\n";
 	char	*spell1 = my_strcat(spell1a, spell1b);
@@ -71,8 +79,10 @@ spell_t	spell_archer(spell_t spell)
 	return (spell);
 }
 
-spell_t	spell_troub(spell_t spell)
+spell_t	spell_troub()
 {
+	spell_t spell;
+
 	char	*spell1a = "Rock N Roll:\t\tPui: 40  Prec: 100 PM: 8\tJoue";
 	char	*spell1b = "de la guitare, rend des PM a tous les allies\n";
 	char	*spell1 = my_strcat(spell1a, spell1b);

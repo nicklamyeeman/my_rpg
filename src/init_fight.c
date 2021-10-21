@@ -18,10 +18,8 @@
 
 void	init_fight(win_t *win, player_t *p)
 {
-	comb_t	*comb;
-	void	*m = malloc(1);
+	comb_t	*comb = init_ennemies();
 
-	comb = init_ennemies(comb);
 	win->f = 0;
 	for (int i = 0; i != 5; i ++)
 		for (int j = 0; comb[i].ennem[j].name != NULL; j ++)

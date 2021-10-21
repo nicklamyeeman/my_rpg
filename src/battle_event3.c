@@ -15,28 +15,28 @@
 #include <fcntl.h>
 #include "rpg.h"
 
-void	verx_event(win_t *win, btle_t *btle)
+void	verx_event(win_t *win)
 {
 	if (win->evt.type == sfEvtKeyPressed)
 		if (win->evt.key.code == sfKeyReturn)
 			win->f = 39;
 }
 
-void	vvme_event(win_t *win, btle_t *btle)
+void	vvme_event(win_t *win)
 {
 	if (win->evt.type == sfEvtKeyPressed)
 		if (win->evt.key.code == sfKeyReturn)
 			win->f = 37;
 }
 
-void	adko_event(win_t *win, btle_t *btle)
+void	adko_event(win_t *win)
 {
 	if (win->evt.type == sfEvtKeyPressed)
 		if (win->evt.key.code == sfKeyReturn)
 			win->f = 2;
 }
 
-void	heal_event(win_t *win, btle_t *btle)
+void	heal_event(win_t *win)
 {
 	if (win->evt.type == sfEvtKeyPressed)
 		if (win->evt.key.code == sfKeyReturn)

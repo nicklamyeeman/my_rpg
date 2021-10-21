@@ -15,7 +15,7 @@
 #include <fcntl.h>
 #include "rpg.h"
 
-int	fainted_ennemy(char *s, comb_t *comb, chara_t *perso)
+int	fainted_ennemy(comb_t *comb, chara_t *perso)
 {
 	int	i = rand() % 5;
 	int	vod = -1;
@@ -33,13 +33,12 @@ int	fainted_ennemy(char *s, comb_t *comb, chara_t *perso)
 
 int	start_fight(comb_t *comb, chara_t *perso)
 {
-	char	*s;
 	int	k = 0;
 
 	while (k != 1) {
 		if (k == 0)
 			my_printf("\nVous entrez dans une zone de combat...");
-		k = fainted_ennemy(s, comb, perso);
+		k = fainted_ennemy(comb, perso);
 	}
 	return (0);
 }

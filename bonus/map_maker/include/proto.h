@@ -45,10 +45,10 @@ int	my_strlen(char *);
 char	*get_next_line(int);
 sfVector2u	create_vector(int, int);
 sfVector2f	create_vector2f(int, int);
-fb_d	*malloc_frame_buffer(fb_d *, unsigned int, unsigned int);
+fb_d	*malloc_frame_buffer(unsigned int, unsigned int);
 void	my_put_pixel(fb_d *, unsigned int, unsigned int, sfColor);
 void	destroy_map(map_s **);
-void	draw_square(int, fb_d *, sfVector2u, sfColor);
+void	draw_square(int, fb_d *, sfVector2u);
 char	*concat_strings(char *, char *);
 int	same_strings(char *, char *);
 void	background_stuff(sfRenderWindow *, int *, int *);
@@ -61,6 +61,6 @@ void	events(variables *, map_s **);
 void	load(map_s **, char *);
 void	save(map_s **, char *);
 int	is_command(char *, map_s **);
-variables	init_var(variables);
+variables	init_var();
 
 #endif	/* !PROTO_H_ */

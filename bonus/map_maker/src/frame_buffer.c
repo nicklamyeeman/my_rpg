@@ -23,8 +23,10 @@ void	my_put_pixel(fb_d *f_b, unsigned int x, unsigned int y, sfColor c)
 	}
 }
 
-fb_d	*malloc_frame_buffer(fb_d *fb, unsigned int h, unsigned int w)
+fb_d	*malloc_frame_buffer(unsigned int h, unsigned int w)
 {
+	fb_d *fb = NULL;
+
 	fb = malloc(sizeof(*fb));
 	fb->height = h;
 	fb->width = w;

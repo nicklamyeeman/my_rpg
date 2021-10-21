@@ -14,7 +14,6 @@
 chara_t	init_mage(void)
 {
 	chara_t	perso;
-	spell_t	spell;
 
 	perso.name = my_strdup("Mage");
 	perso.lvl = 1;
@@ -31,14 +30,13 @@ chara_t	init_mage(void)
 	perso.esc = 10;
 	perso.pc = 2;
 	perso.exp = 0;
-	perso.spell = spell_mage(spell);
+	perso.spell = spell_mage();
 	return (perso);
 }
 
 chara_t	init_pala(void)
 {
 	chara_t	perso;
-	spell_t	spell;
 
 	perso.name = my_strdup("Paladin");
 	perso.lvl = 1;
@@ -55,14 +53,13 @@ chara_t	init_pala(void)
 	perso.esc = 10;
 	perso.pc = 2;
 	perso.exp = 0;
-	perso.spell = spell_pala(spell);
+	perso.spell = spell_pala();
 	return (perso);
 }
 
 chara_t	init_assassin(void)
 {
 	chara_t	perso;
-	spell_t	spell;
 
 	perso.name = my_strdup("Voleur");
 	perso.lvl = 1;
@@ -79,14 +76,13 @@ chara_t	init_assassin(void)
 	perso.esc = 20;
 	perso.pc = 2;
 	perso.exp = 0;
-	perso.spell = spell_assas(spell);
+	perso.spell = spell_assas();
 	return (perso);
 }
 
 chara_t	init_archer(void)
 {
 	chara_t	perso;
-	spell_t	spell;
 
 	perso.name = my_strdup("Archer");
 	perso.lvl = 1;
@@ -103,14 +99,13 @@ chara_t	init_archer(void)
 	perso.esc = 20;
 	perso.pc = 2;
 	perso.exp = 0;
-	perso.spell = spell_archer(spell);
+	perso.spell = spell_archer();
 	return (perso);
 }
 
 chara_t	init_troub(void)
 {
 	chara_t	perso;
-	spell_t	spell;
 
 	perso.name = my_strdup("Menestrel");
 	perso.lvl = 1;
@@ -127,6 +122,6 @@ chara_t	init_troub(void)
 	perso.esc = 20;
 	perso.pc = 2;
 	perso.exp = 0;
-	perso.spell = spell_troub(spell);
+	perso.spell = spell_troub();
 	return (perso);
 }

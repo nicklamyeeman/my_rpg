@@ -32,7 +32,7 @@ SRC		=	$(SRC_DIR)my_strcmp.c			\
 
 INC		=	-I./include
 
-CFLAGS		+=	-g $(INC)
+CFLAGS		+=	-W -Werror -Wall -Wextra -g $(INC)
 
 OBJ		=	$(SRC:.c=.o)
 

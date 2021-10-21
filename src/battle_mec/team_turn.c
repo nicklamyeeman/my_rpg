@@ -41,8 +41,7 @@ int	will_you_run(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
 		}
 		return (3);
 	}
-	else
-		you_dont_run(win, btle, p, ennem);
+	return (you_dont_run(win, btle, p, ennem));
 }
 
 int	resume_fight(win_t *win, btle_t *btle, ennem_t *ennem, chara_t *p)

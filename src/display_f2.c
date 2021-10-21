@@ -15,13 +15,13 @@
 #include <fcntl.h>
 #include "rpg.h"
 
-void	qvvs_display(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
+void	qvvs_display(win_t *win, btle_t *btle, chara_t *p)
 {
 	sfRenderWindow_drawSprite(win->win, btle->turn.qvvss, NULL);
 	sfRenderWindow_drawSprite(win->win, p[p->num].arros, NULL);
 }
 
-void	vplf_display(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
+void	vplf_display(win_t *win, btle_t *btle)
 {
 	sfRenderWindow_drawSprite(win->win, btle->turn.vplfs, NULL);
 	sfSprite_setPosition(btle->nexts, v2f(650, 765));
@@ -37,7 +37,7 @@ void	vplf_display(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
 	sfRenderWindow_drawSprite(win->win, btle->nexts, NULL);
 }
 
-void	vprf_display(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
+void	vprf_display(win_t *win, btle_t *btle)
 {
 	sfRenderWindow_drawSprite(win->win, btle->turn.vprfs, NULL);
 	sfSprite_setPosition(btle->nexts, v2f(920, 765));
@@ -61,7 +61,7 @@ void	vpls_display(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
 	(a.x == 70 && a.y == 965) ? cast_ptwo(win, btle, p, ennem) : 0;
 }
 
-void	qsvl_display(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
+void	qsvl_display(win_t *win, btle_t *btle, chara_t *p)
 {
 	int	c = btle->tmp->perso;
 

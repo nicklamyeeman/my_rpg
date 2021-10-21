@@ -13,7 +13,7 @@
 #include <unistd.h>
 #include "rpg.h"
 
-int	display_inventory(rpg_t *rp, chara_t *car)
+void	display_inventory(rpg_t *rp)
 {
 	sfRenderWindow_drawSprite(rp->wina.win, rp->sprite[6].sprite, NULL);
 	sfRenderWindow_drawSprite(rp->wina.win, rp->sprite[2].sprite, NULL);
@@ -24,9 +24,9 @@ int	display_inventory(rpg_t *rp, chara_t *car)
 		(rp->wina.win, rp->sprite[7].sprite, NULL);
 }
 
-int	do_events(rpg_t *rp, player_t *player)
+void	do_events(rpg_t *rp, player_t *player)
 {
 	(rp->bol.menu == MENU) ? display_menu(rp) : 0;
 	(rp->bol.menu == STAT)? display_stats(rp, player->perso): 0;
-	(rp->bol.menu == INV)? display_inventory(rp, player->perso) : 0;
+	(rp->bol.menu == INV)? display_inventory(rp) : 0;
 }

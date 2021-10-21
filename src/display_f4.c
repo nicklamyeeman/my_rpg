@@ -15,7 +15,7 @@
 #include <fcntl.h>
 #include "rpg.h"
 
-void	verx_display(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
+void	verx_display(win_t *win, btle_t *btle)
 {
 	sfRenderWindow_drawSprite(win->win, btle->turn.verxs, NULL);
 	sfText_setPosition(btle->hptex, v2f(640, 770));
@@ -33,7 +33,7 @@ void	verx_display(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
 	sfRenderWindow_drawText(win->win, btle->hptex, NULL);
 }
 
-void	vvme_display(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
+void	vvme_display(win_t *win, btle_t *btle)
 {
 	sfRenderWindow_drawSprite(win->win, btle->turn.vvmes, NULL);
 	sfSprite_setPosition(btle->nexts, v2f(1130, 770));
@@ -49,7 +49,7 @@ void	vvme_display(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
 	sfRenderWindow_drawSprite(win->win, btle->nexts, NULL);
 }
 
-void	adko_display(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
+void	adko_display(win_t *win, btle_t *btle)
 {
 	sfRenderWindow_drawSprite(win->win, btle->turn.adkos, NULL);
 	sfSprite_setPosition(btle->nexts, v2f(870, 760));
@@ -65,7 +65,7 @@ void	adko_display(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
 	sfRenderWindow_drawSprite(win->win, btle->nexts, NULL);
 }
 
-void	vpap_display(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
+void	vpap_display(win_t *win, btle_t *btle)
 {
 	sfRenderWindow_drawSprite(win->win, btle->turn.vpaps, NULL);
 	sfSprite_setPosition(btle->nexts, v2f(890, 740));
@@ -81,7 +81,7 @@ void	vpap_display(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
 	sfRenderWindow_drawSprite(win->win, btle->nexts, NULL);
 }
 
-void	ratk_display(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
+void	ratk_display(win_t *win, btle_t *btle)
 {
 	sfRenderWindow_drawSprite(win->win, btle->turn.ratks, NULL);
 	sfSprite_setPosition(btle->nexts, v2f(990, 740));

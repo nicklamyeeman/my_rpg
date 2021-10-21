@@ -22,10 +22,11 @@ chara_t	*init_perso(chara_t *perso)
 	return (perso);
 }
 
-comb_t	*init_ennemies(comb_t *comb)
+comb_t	*init_ennemies()
 {
-	ennem_t	*ennem;
-
+	ennem_t	*ennem = NULL;
+	comb_t *comb = NULL;
+	
 	comb = malloc(sizeof(*comb) * 6);
 	comb[0].ennem = init_easy(ennem);
 	comb[1].ennem = init_hard(ennem);

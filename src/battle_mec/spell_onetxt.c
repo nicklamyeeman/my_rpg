@@ -15,7 +15,7 @@
 #include <fcntl.h>
 #include "rpg.h"
 
-void	speone_mage(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
+void	speone_mage(win_t *win, chara_t *p, ennem_t *ennem)
 {
 	sfVector2f	a = sfSprite_getPosition(ennem[ennem->num].ennes);
 
@@ -38,7 +38,7 @@ void	speone_mage(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
 	update_spell(win, &p[1], 192, 3);
 }
 
-void	speone_pala(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
+void	speone_pala(win_t *win, chara_t *p, ennem_t *ennem)
 {
 	sfVector2f	a = sfSprite_getPosition(ennem[ennem->num].ennes);
 	sfFloatRect	b = sfSprite_getGlobalBounds(ennem[ennem->num].ennes);
@@ -63,7 +63,7 @@ void	speone_pala(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
 	update_spell(win, &p[0], 192, 2);
 }
 
-void	speone_mene(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
+void	speone_mene(win_t *win, chara_t *p)
 {
 	sfVector2f	a = sfSprite_getPosition(p[p->num].perss);
 
@@ -85,7 +85,7 @@ void	speone_mene(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
 	update_spell(win, &p[4], 192, 3);
 }
 
-void	speone_vole(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
+void	speone_vole(win_t *win, chara_t *p, ennem_t *ennem)
 {
 	sfVector2f	a;
 
@@ -105,7 +105,7 @@ void	speone_vole(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
 	update_spell(win, &p[3], 98, 1);
 }
 
-void	speone_arch(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
+void	speone_arch(win_t *win, chara_t *p)
 {
 	static	int	i = 0;
 	static	int	k = 200;

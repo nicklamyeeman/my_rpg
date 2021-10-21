@@ -7,7 +7,7 @@
 
 #include "rpg.h"
 
-int	display_items(obj_t *it, rpg_t *rp)
+void	display_items(obj_t *it, rpg_t *rp)
 {
 	sfFloatRect	rec = sfSprite_getGlobalBounds(rp->sprite[6].sprite);
 	sfVector2f	vec;

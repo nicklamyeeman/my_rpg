@@ -22,7 +22,7 @@ void	draw_square2(int x, int y, fb_d *fb, sfVector2u vec)
 		my_put_pixel(fb, vec.x + x, vec.y + y, sfBlack);
 }
 
-void	draw_square(int size, fb_d *fb, sfVector2u vec, sfColor c)
+void	draw_square(int size, fb_d *fb, sfVector2u vec)
 {
 	int	y = -1;
 	int	x = -1;

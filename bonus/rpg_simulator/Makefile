@@ -32,39 +32,30 @@ SRC		=	$(BTL_DIR)battle_orupgrade.c		\
 			$(BTL_DIR)damages.c			\
 			main.c
 
-LIB		= 	-L ./lib/my -lmy
+LIB			= 	-L ./lib/my -lmy
 
-INC		=	-I ./include -I ./lib/my/include
+INC			=	-I ./include -I ./lib/my/include
 
-OBJ		=	$(SRC:.c=.o)
+OBJ			=	$(SRC:.c=.o)
 
-CFLAGS		=	-g $(INC)
+CFLAGS		+=	-W -Wall -Wextra -Werror -g $(INC)
+
+CSFMLFLAGS	=	-lcsfml-graphics -lcsfml-window -lcsfml-audio -lcsfml-system -lcsfml-network
 
 NAME		=	rpg_simulator
 
-all:			$(OBJ)
-			@make -sC ./lib/my
-			@gcc -o $(NAME) $(OBJ) $(LIB) $(CFLAGS) $(INC) -lc_graph_prog
+all:	$(OBJ)
+		@make -sC ./lib/my
+		@gcc -o $(NAME) $(LIB) $(OBJ) $(CSFMLFLAGS)
 
 clean:
-			@make -sC ./lib/my clean
-			@rm -f ./tests/*.gcno
-			@rm -f ./tests/*.gcda
-			@rm -f ./tests/*.o
-			@rm -f ./src/*.gcno
-			@rm -f ./src/*.gcda
-			@rm -f $(OBJ)
+		@make -sC ./lib/my clean
+		@rm -f $(OBJ)
 
-fclean:			clean
-			@make -sC ./lib/my fclean
-			@rm -f $(NAME)
-			@rm -f units-tests
+fclean:	clean
+		@make -sC ./lib/my fclean
+		@rm -f $(NAME)
 
-re:			fclean all
+re:		fclean all
 
-tests_run:
-			@make -sC ./lib/my
-			@make -C ./tests
-			./units-tests
-
-.PHONY:			make re clean fclean all
+.PHONY:	make re clean fclean all

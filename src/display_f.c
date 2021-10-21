@@ -15,7 +15,7 @@
 #include <fcntl.h>
 #include "rpg.h"
 
-void	toch_display(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
+void	toch_display(win_t *win, btle_t *btle, ennem_t *ennem)
 {
 	sfRenderWindow_drawSprite(win->win, btle->turn.tochs, NULL);
 	sfSprite_setPosition(btle->nexts, v2f(1520, 740));
@@ -61,13 +61,13 @@ void	vpae_display(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
 	sfRenderWindow_drawText(win->win, ennem[ennem->num].entex, NULL);
 }
 
-void	qvva_display(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
+void	qvva_display(win_t *win, btle_t *btle, ennem_t *ennem)
 {
 	sfRenderWindow_drawSprite(win->win, btle->turn.qvvas, NULL);
 	sfRenderWindow_drawSprite(win->win, ennem[ennem->num].arros, NULL);
 }
 
-void	qdfv_display(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
+void	qdfv_display(win_t *win, btle_t *btle, chara_t *p)
 {
 	sfRenderWindow_drawSprite(win->win, btle->turn.qdfvs, NULL);
 	sfRenderWindow_drawSprite(win->win, btle->turn.asefs, NULL);
@@ -86,7 +86,7 @@ void	qdfv_display(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
 	sfRenderWindow_drawText(win->win, p[btle->tmp->perso].petex, NULL);
 }
 
-void	dmva_display(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
+void	dmva_display(win_t *win, btle_t *btle)
 {
 	sfRenderWindow_drawSprite(win->win, btle->turn.dmvas, NULL);
 	btle->netim = sfClock_getElapsedTime(btle->neclo);

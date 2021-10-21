@@ -38,7 +38,7 @@ void	qvvs_event(win_t *win, btle_t *btle, chara_t *p)
 	}
 }
 
-void	vprf_event(win_t *win, btle_t *btle)
+void	vprf_event(win_t *win)
 {
 	if (win->evt.type == sfEvtKeyPressed) {
 		if (win->evt.key.code == sfKeyReturn)
@@ -46,7 +46,7 @@ void	vprf_event(win_t *win, btle_t *btle)
 	}
 }
 
-void	vplf_event(win_t *win, btle_t *btle)
+void	vplf_event(win_t *win)
 {
 	if (win->evt.type == sfEvtKeyPressed) {
 		if (win->evt.key.code == sfKeyReturn)
@@ -54,18 +54,18 @@ void	vplf_event(win_t *win, btle_t *btle)
 	}
 }
 
-void	battle_event2(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
+void	battle_event2(win_t *win, btle_t *btle)
 {
-	(win->f == 26) ? ento_event(win, btle) : 0;
-	(win->f == 28) ? crit_event(win, btle) : 0;
-	(win->f == 30) ? ratk_event(win, btle) : 0;
+	(win->f == 26) ? ento_event(win) : 0;
+	(win->f == 28) ? crit_event(win) : 0;
+	(win->f == 30) ? ratk_event(win) : 0;
 	(win->f == 32) ? vpap_event(win, btle) : 0;
-	(win->f == 34) ? adko_event(win, btle) : 0;
-	(win->f == 36) ? vvme_event(win, btle) : 0;
-	(win->f == 38) ? verx_event(win, btle) : 0;
-	(win->f == 40) ? fepn_event(win, btle) : 0;
-	(win->f == 42) ? vapc_event(win, btle) : 0;
-	(win->f == 44) ? bteq_event(win, btle) : 0;
+	(win->f == 34) ? adko_event(win) : 0;
+	(win->f == 36) ? vvme_event(win) : 0;
+	(win->f == 38) ? verx_event(win) : 0;
+	(win->f == 40) ? fepn_event(win) : 0;
+	(win->f == 42) ? vapc_event(win) : 0;
+	(win->f == 44) ? bteq_event(win) : 0;
 	if (win->evt.type == sfEvtClosed) {
 		sfRenderWindow_close(win->win);
 		win->loop = 0;
@@ -79,18 +79,18 @@ void	battle_event(win_t *win, btle_t *btle, chara_t *p, ennem_t *ennem)
 			sfRenderWindow_close(win->win);
 			win->loop = 0;
 		}
-		(win->f == 0) ? dmva_event(win, btle) : 0;
+		(win->f == 0) ? dmva_event(win) : 0;
 		(win->f == 2) ? qdfv_event(win, btle) : 0;
 		(win->f == 4) ? qvva_event(win, btle, p, ennem) : 0;
-		(win->f == 6) ? vpae_event(win, btle, ennem) : 0;
-		(win->f == 8) ? toch_event(win, btle) : 0;
+		(win->f == 6) ? vpae_event(win) : 0;
+		(win->f == 8) ? toch_event(win) : 0;
 		(win->f == 10) ? qsvl_event(win, btle) : 0;
 		(win->f == 14) ? qvvs_event(win, btle, p) : 0;
-		(win->f == 16) ? heal_event(win, btle) : 0;
-		(win->f == 18) ? vprm_event(win, btle) : 0;
-		(win->f == 20) ? vprf_event(win, btle) : 0;
-		(win->f == 22) ? vplf_event(win, btle) : 0;
-		(win->f == 24) ? eavp_event(win, btle) : 0;
-		(win->f >= 26) ? battle_event2(win, btle, p, ennem) : 0;
+		(win->f == 16) ? heal_event(win) : 0;
+		(win->f == 18) ? vprm_event(win) : 0;
+		(win->f == 20) ? vprf_event(win) : 0;
+		(win->f == 22) ? vplf_event(win) : 0;
+		(win->f == 24) ? eavp_event(win) : 0;
+		(win->f >= 26) ? battle_event2(win, btle) : 0;
 	}
 }

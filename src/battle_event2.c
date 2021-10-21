@@ -15,35 +15,35 @@
 #include <fcntl.h>
 #include "rpg.h"
 
-void	ratk_event(win_t *win, btle_t *btle)
+void	ratk_event(win_t *win)
 {
 	if (win->evt.type == sfEvtKeyPressed)
 		if (win->evt.key.code == sfKeyReturn)
 			win->f = 31;
 }
 
-void	crit_event(win_t *win, btle_t *btle)
+void	crit_event(win_t *win)
 {
 	if (win->evt.type == sfEvtKeyPressed)
 		if (win->evt.key.code == sfKeyReturn)
 			win->f = 29;
 }
 
-void	ento_event(win_t *win, btle_t *btle)
+void	ento_event(win_t *win)
 {
 	if (win->evt.type == sfEvtKeyPressed)
 		if (win->evt.key.code == sfKeyReturn)
 			win->f = 27;
 }
 
-void	eavp_event(win_t *win, btle_t *btle)
+void	eavp_event(win_t *win)
 {
 	if (win->evt.type == sfEvtKeyPressed)
 		if (win->evt.key.code == sfKeyReturn)
 			win->f = 25;
 }
 
-void	vprm_event(win_t *win, btle_t *btle)
+void	vprm_event(win_t *win)
 {
 	if (win->evt.type == sfEvtKeyPressed)
 		if (win->evt.key.code == sfKeyReturn)

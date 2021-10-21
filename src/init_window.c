@@ -11,8 +11,10 @@
 #include <SFML/System.h>
 #include "rpg.h"
 
-win_t	init_window(win_t w)
+win_t	init_window()
 {
+	win_t w;
+
 	w.width = 1;
 	w.height = 1;
 	w.ratio = 1;

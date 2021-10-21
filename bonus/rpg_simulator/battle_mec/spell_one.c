@@ -98,7 +98,7 @@ int	vole_sone(comb_t *comb, int i, chara_t *p, fight_t *tmp)
 	return (0);
 }
 
-int	mene_sone(comb_t *comb, int i, chara_t *p, fight_t *tmp)
+int	mene_sone(chara_t *p, fight_t *tmp)
 {
 	int	e = rand() % 100;
 

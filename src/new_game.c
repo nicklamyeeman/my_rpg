@@ -34,10 +34,9 @@ void	load_new_player(player_t *player)
 void	new_game(win_t *w)
 {
 	player_t	player;
-	rpg_t	rp;
 	void	*m = malloc(1);
 
 	srand((unsigned long)m);
 	load_new_player(&player);
-	start_game(w, &player, rp);
+	start_game(w, &player);
 }

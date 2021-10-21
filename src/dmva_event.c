@@ -15,7 +15,7 @@
 #include <fcntl.h>
 #include "rpg.h"
 
-void	toch_event(win_t *win, btle_t *btle)
+void	toch_event(win_t *win)
 {
 	if (win->evt.type == sfEvtKeyPressed)
 		if (win->evt.key.code == sfKeyReturn)
@@ -46,14 +46,14 @@ void	qvva_event(win_t *win, btle_t *btle, chara_t *perso, ennem_t *ennem)
 	}
 }
 
-void	vpae_event(win_t *win, btle_t *btle, ennem_t *ennem)
+void	vpae_event(win_t *win)
 {
 	if (win->evt.type == sfEvtKeyPressed)
 		if (win->evt.key.code == sfKeyReturn)
 			win->f = 7;
 }
 
-void	dmva_event(win_t *win, btle_t *btle)
+void	dmva_event(win_t *win)
 {
 	if (win->evt.type == sfEvtKeyPressed)
 		if (win->evt.key.code == sfKeyReturn)

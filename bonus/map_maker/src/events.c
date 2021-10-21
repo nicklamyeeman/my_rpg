@@ -50,9 +50,9 @@ char	*add_to_buf(char *buf, int c)
 		buf[0] = charactifier(c);
 		buf[1] = '\0';
 	} else {
-		for (i; buf[i] != '\0'; i++);
+		for (; buf[i] != '\0'; i++);
 		tmp = malloc(i + 2);
-		for (j; j != i; j++)
+		for (; j != i; j++)
 			tmp[j] = buf[j];
 		tmp[j] = charactifier(c);
 		tmp[i + 1] = '\0';

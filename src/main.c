@@ -19,7 +19,6 @@
 int	check_display(char **env)
 {
 	int	i = 0;
-	int	disp = 0;
 
 	while (env[i] != NULL) {
 		if (my_strcmp(env[i], "DISPLAY=:0") == 0)

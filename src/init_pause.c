@@ -87,8 +87,10 @@ stat_t	init_stats(void)
 	return (stat);
 }
 
-rpg_t	init_struct(rpg_t rp, win_t *w)
+rpg_t	init_struct(win_t *w)
 {
+	rpg_t rp;
+
 	rp.bol.menu = 0;
 	rp.bol.in = 0;
 	rp.bol.per = 0;

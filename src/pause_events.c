@@ -13,7 +13,7 @@
 #include <unistd.h>
 #include "rpg.h"
 
-int	event_stat(rpg_t *rp, sfEvent ev)
+void	event_stat(rpg_t *rp, sfEvent ev)
 {
 	if (ev.type == sfEvtKeyPressed && ev.key.code == sfKeyRight)
 		rp->bol.per += (rp->bol.per == MENESTR) ? -4 : 1;
