@@ -87,8 +87,7 @@ Menu page:
 
 Navigate throught the menu with your mouse and click on the option you want
 
-
-<img src="config/assets/boss.png" alt="boss">
+<img src="config/assets/walk.gif" alt="walk">
 
 Move around using :
              <kbd>Z</kbd>
@@ -132,6 +131,7 @@ Each level progressively increase stats of each characters in your team
 
 Now you can try to find the boss and kick his a** ! 
 
+<img src="config/assets/boss.png" alt="boss">
 <img src="config/assets/bossfight.png" alt="bossfight">
 
 
