@@ -207,11 +207,11 @@ Contributions are what make the open source community such an amazing place to b
 5. Open a Pull Request
 
 We were 5 originally on this project : 
- - LAM YEE MAN Nick
- - DEMEESTER Alexandre
- - DEMOL Axel
- - HOARAU Alexandre
- - CHAN YEN MAN Garance
+ - [LAM YEE MAN Nick](https://github.com/nicklamyeeman)
+ - [DEMEESTER Alexandre](https://github.com/rokuo)
+ - [DEMOL Axel](https://www.instagram.com/axel.demol/)
+ - [HOARAU Alexandre](https://www.instagram.com/alex__hoarau/)
+ - [CHAN YEN MAN Garance](https://www.instagram.com/leptinoich/)
 
 
 
